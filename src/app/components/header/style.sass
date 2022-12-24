@@ -1,0 +1,37 @@
+@import '../../../assets/styles/variables'
+
+// Header
+//
+
+// Elements
+// --------------------------------------------------
+
+.app-header__container
+  display: flex
+  justify-content: space-between
+  align-items: center
+  z-index: 1002
+  background-color: $header-bg-color
+  color: $menu-text-color
+  padding: 0 40px
+  height: 60px
+
+.app-header__logo
+  display: flex
+  img
+    width: 110px
+
+.app-header__list
+  display: flex
+
+.app-header-list__item
+  display: flex
+  align-items: center
+  margin-left: 40px
+  img
+    max-height: 25px
+    margin-right: 5px
+  p
+    font-weight: $bold
+  &:hover
+    text-decoration: none

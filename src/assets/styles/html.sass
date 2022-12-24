@@ -1,0 +1,87 @@
+// Basic HTML
+//
+// Typography and other basic HTML elements.
+//
+// Good practice is to use basic HTML tags only in the WYSiWYG sections like an
+// article content or basic subpage. For everything else, as much as it is
+// possible use the components built from <div> and <span> elements.
+
+// Basic html tags
+// --------------------------------------------------
+\:root
+  font-size: $font-size-base-mobile
+  +breakpoint(tablet)
+    font-size: $font-size-base
+
+// Hide the side effects caused by the page loading with a delayed a fade in effect.
+body
+  opacity: 0
+  animation:
+    name: fade-in
+    timing-function: ease-out
+    duration: 500ms
+    delay: 1s
+    fill-mode: forwards
+
+@keyframes fade-in
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+body
+  font-weight: $regular
+  font-family: $font-family-base
+  line-height: $line-height-base
+  margin: 0
+
+a
+  color: $link-color
+  text-decoration: none
+
+  &:hover,
+  &:active,
+  &:focus
+    color: $link-color
+
+  &:hover
+    text-decoration: underline
+
+// Lists
+// -----------------------------------
+ul li
+  list-style: none
+
+// Tables
+// --------------------------------------------------
+table
+  border-spacing: 0
+  line-height: normal
+  text-align: left
+  width: 100%
+  border-radius: 2px
+  overflow: hidden
+  margin-bottom: 30px
+
+  caption
+    text-align: left
+    padding: 5px 0
+    margin-bottom: paragraphs-margin
+
+  tr:last-child
+    td:first-child
+      border-bottom-left-radius: 2px
+    td:last-child
+      border-bottom-right-radius: 2px
+
+  td
+    vertical-align: middle
+    font-weight: $regular
+    font-size: 16px
+    border-bottom: 1px solid $brand-primary
+
+  th
+    background-color: $brand-primary
+
+  button:focus
+    outline: none
